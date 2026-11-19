@@ -1,0 +1,74 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #f0f4f8; color: #1e2a3a; }
+
+header { background-color: #0a3d62; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; position: sticky; top: 0; z-index: 1000; }
+.logo h1 { font-size: 24px; color: #1dd1a1; }
+.logo p { font-size: 12px; color: #b8d8e8; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+nav a:hover { color: #1dd1a1; }
+
+/* CARROSSEL */
+.carrossel-container { position: relative; max-width: 100%; overflow: hidden; }
+.carrossel { position: relative; height: 400px; overflow: hidden; }
+.slide { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.slide.ativo { display: block; }
+.slide img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55); }
+.slide-texto { position: absolute; top: 50%; left: 10%; transform: translateY(-50%); color: #fff; max-width: 500px; z-index: 2; }
+.slide-texto h2 { font-size: 34px; margin-bottom: 10px; color: #1dd1a1; }
+.btn-carrossel { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; padding: 15px; cursor: pointer; font-size: 18px; z-index: 10; transition: background 0.3s; }
+.btn-carrossel:hover { background: #1dd1a1; }
+.prev { left: 10px; } .next { right: 10px; }
+
+/* CARDS INFORMATIVOS */
+.cards-informativos { display: flex; justify-content: space-around; padding: 30px 5%; background: #fff; flex-wrap: wrap; gap: 20px; }
+.card-info { flex: 1; min-width: 250px; text-align: center; padding: 20px; background: #e8f4f8; border-radius: 8px; border-top: 4px solid #1dd1a1; }
+.card-info h3 { color: #0a3d62; margin-bottom: 10px; }
+
+/* VAGAS */
+.secao-vagas { padding: 50px 5%; text-align: center; }
+.secao-vagas h2 { font-size: 32px; color: #0a3d62; margin-bottom: 30px; }
+.grid-vagas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+.card-vaga { background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.3s; text-align: left; padding-bottom: 20px; border-top: 4px solid #1dd1a1; }
+.card-vaga:hover { transform: translateY(-5px); }
+.card-vaga img { width: 100%; height: 150px; object-fit: cover; }
+.card-vaga h3 { margin: 15px 15px 10px; color: #0a3d62; }
+.card-vaga p { margin: 0 15px 5px; font-size: 14px; color: #555; }
+.btn-detalhes { margin: 10px 15px; background-color: #0a3d62; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; transition: background 0.3s; }
+.btn-detalhes:hover { background-color: #1dd1a1; color: #0a3d62; }
+.detalhe { margin: 10px 15px; font-size: 13px; color: #0a3d62; background: #e8f4f8; padding: 10px; border-radius: 4px; }
+.escondido { display: none; }
+
+/* SOBRE */
+.secao-sobre { display: flex; align-items: center; justify-content: center; padding: 50px 5%; background: #d6eaf8; gap: 40px; flex-wrap: wrap; }
+.sobre-texto { flex: 1; min-width: 300px; }
+.sobre-texto h2 { color: #0a3d62; margin-bottom: 15px; }
+.secao-sobre img { flex: 1; min-width: 300px; max-width: 500px; border-radius: 8px; }
+
+/* VIDEO */
+.secao-video { padding: 50px 5%; text-align: center; }
+.secao-video h2 { color: #0a3d62; margin-bottom: 20px; }
+.video-container iframe { max-width: 100%; border-radius: 8px; }
+
+/* CONTATO */
+.secao-contato { padding: 50px 5%; background: #0a3d62; color: #fff; text-align: center; }
+.secao-contato h2 { color: #1dd1a1; margin-bottom: 20px; }
+.secao-contato p { margin-bottom: 10px; font-size: 18px; }
+.secao-contato a { color: #1dd1a1; }
+
+/* FOOTER */
+footer { background: #062b47; color: #b8d8e8; text-align: center; padding: 30px 5%; }
+.footer-conteudo h2 { color: #1dd1a1; margin-bottom: 10px; }
+.footer-links { list-style: none; display: flex; justify-content: center; gap: 20px; margin-top: 15px; flex-wrap: wrap; }
+.footer-links a { color: #b8d8e8; text-decoration: none; font-size: 14px; }
+.footer-links a:hover { color: #1dd1a1; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    header { flex-direction: column; text-align: center; gap: 10px; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
+    .carrossel { height: 250px; }
+    .slide-texto h2 { font-size: 24px; }
+    .secao-sobre { flex-direction: column; }
+    .secao-sobre img { width: 100%; }
+}

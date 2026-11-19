@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Vagas - Oportunidades para o seu Futuro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Conecta Vagas</h1>
+            <p>Oportunidades para o seu futuro</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#vagas">Vagas</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#video">Vídeo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CARROSSEL -->
+    <section id="inicio" class="carrossel-container">
+        <div class="carrossel">
+            <div class="slide ativo">
+                <!-- O "?v=1" força o navegador a atualizar a imagem -->
+                <img src="img/banner1.jpg?v=1" alt="Pessoas em ambiente de trabalho">
+                <div class="slide-texto">
+                    <h2>Conectando Talentos e Empresas</h2>
+                    <p>Encontre oportunidades de trabalho e dê o próximo passo na sua carreira.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/banner2.jpg" alt="Entrevista de emprego">
+                <div class="slide-texto">
+                    <h2>Seu Futuro Começa Aqui</h2>
+                    <p>Dicas e vagas para impulsionar sua carreira.</p>
+                </div>
+            </div>
+            <button class="btn-carrossel prev" onclick="mudarSlide(-1)">&#10094;</button>
+            <button class="btn-carrossel next" onclick="mudarSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- CARDS INFORMATIVOS -->
+    <section class="cards-informativos">
+        <div class="card-info">
+            <h3>Dicas de Currículo</h3>
+            <p>Como destacar suas habilidades.</p>
+        </div>
+        <div class="card-info">
+            <h3>Preparação para Entrevistas</h3>
+            <p>Saiba como se sair bem.</p>
+        </div>
+        <div class="card-info">
+            <h3>Atualização Profissional</h3>
+            <p>Mantenha-se competitivo no mercado.</p>
+        </div>
+    </section>
+
+    <!-- VAGAS -->
+    <section id="vagas" class="secao-vagas">
+        <h2>Vagas em Destaque</h2>
+
+        <div class="grid-vagas">
+            <div class="card-vaga">
+                <img src="img/vaga1.jpg" alt="Desenvolvedor Web">
+                <h3>Desenvolvedor Web</h3>
+                <p><strong>Área:</strong> Tecnologia</p>
+                <p><strong>Cidade:</strong> Muriaé/MG</p>
+                <p><strong>Modalidade:</strong> CLT</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes('detalhe1', this)">Ver detalhes</button>
+                <p id="detalhe1" class="detalhe escondido">Buscamos profissional com conhecimento em HTML, CSS e JavaScript. Salário a combinar.</p>
+            </div>
+            <div class="card-vaga">
+                <img src="img/vaga2.jpg" alt="Assistente Administrativo">
+                <h3>Assistente Administrativo</h3>
+                <p><strong>Área:</strong> Administrativo</p>
+                <p><strong>Cidade:</strong> Muriaé/MG</p>
+                <p><strong>Modalidade:</strong> CLT</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes('detalhe2', this)">Ver detalhes</button>
+                <p id="detalhe2" class="detalhe escondido">Vaga para auxiliar em rotinas administrativas. Necessário ensino médio completo.</p>
+            </div>
+            <div class="card-vaga">
+                <img src="img/vaga3.jpg" alt="Auxiliar de Produção">
+                <h3>Auxiliar de Produção</h3>
+                <p><strong>Área:</strong> Indústria</p>
+                <p><strong>Cidade:</strong> Muriaé/MG</p>
+                <p><strong>Modalidade:</strong> Efetivo</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes('detalhe3', this)">Ver detalhes</button>
+                <p id="detalhe3" class="detalhe escondido">Atuar na linha de produção. Experiência na área é um diferencial.</p>
+            </div>
+            <div class="card-vaga">
+                <img src="img/vaga4.jpg" alt="Analista de Marketing">
+                <h3>Analista de Marketing</h3>
+                <p><strong>Área:</strong> Marketing</p>
+                <p><strong>Cidade:</strong> Muriaé/MG</p>
+                <p><strong>Modalidade:</strong> PJ</p>
+                <button class="btn-detalhes" onclick="toggleDetalhes('detalhe4', this)">Ver detalhes</button>
+                <p id="detalhe4" class="detalhe escondido">Responsável por campanhas digitais e redes sociais. Conhecimento em SEO é um plus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="dicas" class="secao-sobre">
+        <div class="sobre-texto">
+            <h2>Sobre o Conecta Vagas</h2>
+            <p>Uma iniciativa comunitária que reúne oportunidades de emprego e orientações profissionais para jovens e profissionais que buscam recolocação no mercado.</p>
+        </div>
+        <img src="img/sobre.jpg" alt="Equipe de trabalho">
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="secao-video">
+        <h2>Dicas de Carreira</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wkjCX9kyloU?si=JnLCJ_dF2x0qBtdZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao-contato">
+        <h2>Contato</h2>
+        <p><strong>E-mail:</strong> <a href="mailto:contato@conectavagas.com.br">contato@conectavagas.com.br</a></p>
+        <p><strong>Cidade:</strong> Muriaé - MG</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-conteudo">
+            <h2>Conecta Vagas</h2>
+            <p>&copy; 2026 Conecta Vagas. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#vagas">Vagas</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#video">Vídeo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
